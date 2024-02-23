@@ -16,7 +16,50 @@ import "../styles/global.css"
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-	</head>
+	
+    
+    
+    <script is:inline>
+        const DARK_THEME_CLASS ="dark";
+        const COLOUR_MODE = "COLOUR_MODE";
+        const LIGHT_THEME = "LIGHT";
+        const DARK_THEME = "DARK";
+
+        const rootELEMENT= document.documentElement;
+
+        const getInitialColourMode = ()=>{
+        const previouslySavedColourMode = localStorage.getItem(COLOUR_MODE);
+
+        if (previouslySavedColourMode){
+            return previouslySavedColourMode;
+        };
+
+        if(matchMedia("(prefers-color-schema:dark").matches){
+            return DARK_THEME;
+        };
+
+        return LIGHT_THEME;
+    };
+     const initialColourMode = getInitialColourMode();
+
+     const setInitialColourMode = (mode)=>{
+        // set required class on the root element
+        if(mode==LIGHT_THEME){
+            rootELEMENT.classList.remove(DARK_THEME_CLASS)
+        } else {
+            rootELEMENT.classList.add(DARK_THEME_CLASS)
+        }
+    };
+
+   
+
+
+     setInitialColourMode(initialColourMode);
+    </script>     
+    
+    
+    
+    </head>
 	<body>
         <main>
             <NavigationBar/>

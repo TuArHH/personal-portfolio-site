@@ -1,4 +1,5 @@
 ---
+
 ---
 
 <button aria-label="Theme toggler">
@@ -42,14 +43,35 @@
 </style>
 
 <script>
-    const DARK_THEME_CLASS ="dark";
+  
 
+    // Grab the toggle
     const toggle = document.querySelector("button");
     const rootELEMENT= document.documentElement;
+    
+
+    const DARK_THEME_CLASS ="dark";
+    const COLOUR_MODE = "COLOUR_MODE";
+    const LIGHT_THEME = "LIGHT";
+    const DARK_THEME = "DARK";
+
 
     if(toggle){
         toggle.addEventListener("click",()=>{
             rootELEMENT.classList.toggle(DARK_THEME_CLASS);
+
+
+            const colourMode= rootELEMENT.classList.contains(DARK_THEME_CLASS) 
+            ? DARK_THEME
+            : LIGHT_THEME;
+
+
+            localStorage.setItem(COLOUR_MODE,colourMode);
         })
     };
+
+
+    
+
+
 </script>
