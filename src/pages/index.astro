@@ -1,12 +1,22 @@
 ---
 
 import Main from "../layouts/Main.astro"
+import Card from '../components/Card.astro'
 const portfoliopicture = "src\\img\\TugrulArslan.webp"
 
+import Azure from '../components/Technology/Azure.astro'
+import CSharp from "../components/Technology/CSharp.astro"
+import SQL from "../components/Technology/SQL.astro"
+import Git from "../components/Technology/Git.astro"
+import Powershell from "../components/Technology/Powershell.astro"
+import Javascript from "../components/Technology/Javascript.astro"
+import Linux from "../components/Technology/Linux.astro"
+import PowerBI from "../components/Technology/PowerBI.astro"
+import Figma from "../components/Technology/Figma.astro"
 
 ---
 
-<Main>
+<Main >
 	<div class="profile">
 			<img
 			alt = 'Tugrul Arslan website'
@@ -20,7 +30,40 @@ const portfoliopicture = "src\\img\\TugrulArslan.webp"
 			<h1>Tugrul Arslan</h1>
 			<h2>Data Engineer</h2>
 			</div>
-</div>
+	</div>
+
+	<div 
+		class="cards-container"
+		style="display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 20px; padding: 20px;">
+		<Card >
+			<!-- Azure-Komponente als Slot-Inhalt -->
+			<Azure/> 
+		</Card>
+		<Card>
+			<CSharp/> 
+		</Card>
+		<Card>
+			<SQL/> 
+		</Card>
+		<Card>
+			<Git/> 
+		</Card>
+		<Card>
+			<Powershell/> 
+		</Card>
+		<Card>
+			<Javascript/> 
+		</Card>
+		<Card>
+			<Linux/> 
+		</Card>
+		<Card>
+			<PowerBI/> 
+		</Card>
+		<Card>
+			<Figma/> 
+		</Card>
+	</div>
 </Main>	
 
 	
@@ -46,4 +89,14 @@ const portfoliopicture = "src\\img\\TugrulArslan.webp"
 		border-radius: 50%;
 		margin: 0 2rem 1rem 0;
 	}
+
+	.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Passt die Anzahl der Spalten an die Breite des Containers an */
+    gap: 20px; /* Abstand zwischen den Karten */
+    padding: 20px; /* Abstand des Containers zu seinem umgebenden Element */
+}
+
+
 </style>
+

@@ -37,3 +37,7 @@ main {
   max-width: 40rem;
   margin: auto;
 }
+
+.dark svg {
+  fill: var(--grey-900);
+}

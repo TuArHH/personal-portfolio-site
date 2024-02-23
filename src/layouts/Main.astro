@@ -3,6 +3,13 @@
 import Footer from "../components/Footer.astro"
 import NavigationBar from "../components/NavigationBar.astro"
 import "../styles/global.css"
+
+
+
+
+
+
+
 ---
 
 <html lang="en">
@@ -12,14 +19,13 @@ import "../styles/global.css"
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
         <meta name="description" content ="Tugrul Arslan website"/>
-		<title>Astro</title>
+		<title>Tugrul Arslan | Data Engineer</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 	
     
-    
-    <script is:inline>
+<script is:inline>
         const DARK_THEME_CLASS ="dark";
         const COLOUR_MODE = "COLOUR_MODE";
         const LIGHT_THEME = "LIGHT";
@@ -51,18 +57,14 @@ import "../styles/global.css"
         }
     };
 
-   
-
-
      setInitialColourMode(initialColourMode);
     </script>     
-    
-    
     
     </head>
 	<body>
         <main>
             <NavigationBar/>
+            
             <!--Content of the page that will be render with slot(replace the childitem) -->
             <slot/>
         </main>
@@ -72,5 +74,11 @@ import "../styles/global.css"
 
 
 
-
-
+<style>
+.cards-container {
+    display: flex;
+    overflow-x: auto; /* Allows horizontal scrolling for many items */
+    gap: 20px; /* Space between cards */
+    padding: 20px; /* Padding around the container */
+}
+</style>

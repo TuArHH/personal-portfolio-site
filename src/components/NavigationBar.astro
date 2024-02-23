@@ -9,10 +9,9 @@ import Github from './Github.astro';
 <nav>
     <ul>
         <li><a href="/">Technology</a></li>
-        <li><a href="#">Work</a></li>
          <li>
             <a href="https://www.linkedin.com/in/tugrul-arslan/" target="_blank">
-                <LinkedIn/>
+                <LinkedIn class="linkedin"/>
             </a>
         </li>
         <li>
@@ -27,7 +26,6 @@ import Github from './Github.astro';
         </li>
        
     </ul>
-   
    
     <ThemeToggler/>
 </nav>
@@ -62,6 +60,10 @@ import Github from './Github.astro';
 
     a:hover{
         color: var(--grey-900)
+    }
+
+    :global(.dark) .linkedin{
+        fill: aqua;
     }
 
    

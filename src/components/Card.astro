@@ -1,0 +1,19 @@
+<div class="card">
+    <slot></slot> <!-- Slot für dynamische Inhalte -->
+</div>
+
+<style>
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 16px;
+    margin: 1rem; /* Sorgt für Abstand rund um die Karte */
+    width: calc(100% - 1rem); /* Stellt sicher, dass die Breite der Karte den Abstand berücksichtigt */
+    box-sizing: border-box; /* Stellt sicher, dass Padding und Border in der Breite enthalten sind */
+    justify-items: center; /* Zentriert die Items horizontal */
+  align-items: center; /* Zentriert die Items vertikal */
+}
+
+</style>
