@@ -1,16 +1,49 @@
 ---
 
+import Main from "../layouts/Main.astro"
+const portfoliopicture = "src\\img\\TugrulArslan.webp"
+
+
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Main>
+	<div class="profile">
+			<img
+			alt = 'Tugrul Arslan website'
+			width="150px"
+			height="150px"
+			src={portfoliopicture}
+			class="profile_picture"
+			/>
+
+			<div class="profile__details">
+			<h1>Tugrul Arslan</h1>
+			<h2>Data Engineer</h2>
+			</div>
+</div>
+</Main>	
+
+	
+
+<style>
+	/*css as usual */
+	.profile{
+		display: flex;
+		align-items: flex-start;
+		flex-wrap: wrap;
+		padding: 1rem 0 3rem 0;
+	}
+
+	.profile__details{
+		flex: 1 0 300px;
+	}
+
+	.profile__details > h1 {
+		margin-top: 0;
+	}
+
+	.profile_picture{
+		border-radius: 50%;
+		margin: 0 2rem 1rem 0;
+	}
+</style>
