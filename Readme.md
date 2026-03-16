@@ -60,5 +60,6 @@ git remote add origin https://github.com/TuArHH/YOUR-REPO-NAME.git
 
 # Push
 git branch -M main
-git push -u origin main
+git push -u origin main or 
+git push -u origin main --force
 ```
