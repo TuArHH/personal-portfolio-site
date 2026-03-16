@@ -1,0 +1,96 @@
+/* ── Tokens ───────────────────────────────────────────── */
+:root {
+  --bg:          #e6f4f1;
+  --bg-alt:      #d0ebe4;
+  --surface:     #ffffff;
+  --surface-alt: rgba(255, 255, 255, 0.6);
+  --border:      rgba(13, 148, 136, 0.2);
+  --text:        #0f2d26;
+  --text-muted:  #3d7a6b;
+  --accent:      #0d9488;
+  --accent-h:    #0f766e;
+  --nav-bg:      rgba(230, 244, 241, 0.88);
+  --shadow:      rgba(13, 148, 136, 0.10);
+  --radius:      12px;
+}
+
+html.dark {
+  --bg:          #071e22;
+  --bg-alt:      #0d2e38;
+  --surface:     rgba(255, 255, 255, 0.06);
+  --surface-alt: rgba(255, 255, 255, 0.03);
+  --border:      rgba(45, 212, 191, 0.18);
+  --text:        #e0f5f0;
+  --text-muted:  #6bbfb2;
+  --accent:      #2dd4bf;
+  --accent-h:    #14b8a6;
+  --nav-bg:      rgba(7, 30, 34, 0.88);
+  --shadow:      rgba(0, 0, 0, 0.35);
+}
+
+/* ── Reset ────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body { height: 100%; }
+
+/* Smooth anchor scrolling, offset for sticky nav */
+html { scroll-behavior: smooth; }
+.section { scroll-margin-top: 68px; }
+
+/* ── Base ─────────────────────────────────────────────── */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  transition: background-color 0.25s, color 0.25s;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Layout ───────────────────────────────────────────── */
+.container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Sticky footer: main grows to push footer down */
+main {
+  flex: 1;
+}
+
+/* ── Typography ───────────────────────────────────────── */
+h1 { font-size: clamp(2rem, 5vw, 3rem); line-height: 1.1; font-weight: 700; }
+h2 { font-size: clamp(1rem, 2.5vw, 1.2rem); font-weight: 400; color: var(--text-muted); }
+h3 { font-size: 1.4rem; font-weight: 600; }
+p  { line-height: 1.7; color: var(--text-muted); }
+
+/* ── Section ──────────────────────────────────────────── */
+.section {
+  padding: 4rem 0;
+}
+
+.section-title {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.section-heading {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 2rem;
+}
+
+/* ── Divider ──────────────────────────────────────────── */
+.divider {
+  height: 1px;
+  background: var(--border);
+}
