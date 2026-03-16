@@ -37,3 +37,28 @@ EOF
 * `favicon.svg` — B&W profile favicon
 
 **Tip:** Each time you rebuild, the CSS filename changes (content hash). Always upload the full `dist/` folder fresh, not just individual files.
+
+
+### Git commands
+
+
+```bash
+# Navigate to the project
+cd "/Users/tugrularslan/Documents/_DEV/Cloud/Personal Landing Page/personal-portfolio-v2"
+
+# Initialize git
+git init
+
+# Stage all files
+git add .
+
+# First commit
+git commit -m "Initial commit: personal portfolio v2"
+
+# Point to your GitHub repo
+git remote add origin https://github.com/TuArHH/YOUR-REPO-NAME.git
+
+# Push
+git branch -M main
+git push -u origin main
+```
